@@ -564,3 +564,12 @@ C:\Users\faris\source\repos\Andal\Andal.API\obj\Debug\net6.0\refint\Andal.dll
 C:\Users\faris\source\repos\Andal\Andal.API\obj\Debug\net6.0\Andal.pdb
 C:\Users\faris\source\repos\Andal\Andal.API\obj\Debug\net6.0\Andal.genruntimeconfig.cache
 C:\Users\faris\source\repos\Andal\Andal.API\obj\Debug\net6.0\ref\Andal.dll
+C:\Users\faris\source\repos\Andal\Andal.API\bin\Debug\net6.0\Andal.DataAccess.dll
+C:\Users\faris\source\repos\Andal\Andal.API\bin\Debug\net6.0\Andal.Models.dll
+C:\Users\faris\source\repos\Andal\Andal.API\bin\Debug\net6.0\Andal.DataAccess.pdb
+C:\Users\faris\source\repos\Andal\Andal.API\bin\Debug\net6.0\Andal.Models.pdb
+C:\Users\faris\source\repos\Andal\Andal.API\obj\Debug\net6.0\staticwebassets\msbuild.Andal.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\faris\source\repos\Andal\Andal.API\obj\Debug\net6.0\staticwebassets\msbuild.build.Andal.props
+C:\Users\faris\source\repos\Andal\Andal.API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Andal.props
+C:\Users\faris\source\repos\Andal\Andal.API\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Andal.props
+C:\Users\faris\source\repos\Andal\Andal.API\obj\Debug\net6.0\staticwebassets.pack.json

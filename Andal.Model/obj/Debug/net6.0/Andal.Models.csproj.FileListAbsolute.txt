@@ -1,0 +1,12 @@
+C:\Users\faris\source\repos\Andal\Andal.Model\bin\Debug\net6.0\Andal.Models.deps.json
+C:\Users\faris\source\repos\Andal\Andal.Model\bin\Debug\net6.0\Andal.Models.dll
+C:\Users\faris\source\repos\Andal\Andal.Model\bin\Debug\net6.0\Andal.Models.pdb
+C:\Users\faris\source\repos\Andal\Andal.Model\obj\Debug\net6.0\Andal.Models.csproj.AssemblyReference.cache
+C:\Users\faris\source\repos\Andal\Andal.Model\obj\Debug\net6.0\Andal.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\faris\source\repos\Andal\Andal.Model\obj\Debug\net6.0\Andal.Models.AssemblyInfoInputs.cache
+C:\Users\faris\source\repos\Andal\Andal.Model\obj\Debug\net6.0\Andal.Models.AssemblyInfo.cs
+C:\Users\faris\source\repos\Andal\Andal.Model\obj\Debug\net6.0\Andal.Models.csproj.CoreCompileInputs.cache
+C:\Users\faris\source\repos\Andal\Andal.Model\obj\Debug\net6.0\Andal.Models.dll
+C:\Users\faris\source\repos\Andal\Andal.Model\obj\Debug\net6.0\refint\Andal.Models.dll
+C:\Users\faris\source\repos\Andal\Andal.Model\obj\Debug\net6.0\Andal.Models.pdb
+C:\Users\faris\source\repos\Andal\Andal.Model\obj\Debug\net6.0\ref\Andal.Models.dll

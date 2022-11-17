@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Andal.Data;
 using Andal.Models;
-using Microsoft.AspNetCore.Cors;
-using System.Drawing;
-using System.Text.Json.Serialization;
+using Andal.DataAccess.Repositories.IRepositories;
 
 namespace Andal.Controllers
 {
@@ -17,17 +9,17 @@ namespace Andal.Controllers
     [ApiController]
     public class JobTitlesController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public JobTitlesController(AppDbContext context)
+        public JobTitlesController(IUnitOfWork unitOfWork)
         {
-            _context = context;
+            _unitOfWork = unitOfWork;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<JobTitle>>> GetJobTitles()
         {
-            var model = await _context.JobTitles.AsNoTracking().ToListAsync();
+            var model = await _unitOfWork.JobTitle.ToListAsync();
             return Ok(model);
         }
 
@@ -41,18 +33,19 @@ namespace Andal.Controllers
 
             jobTitle.Code = jobTitle.Code.Trim().ToUpper();
 
-            var checker = await _context.JobTitles.AsNoTracking().SingleOrDefaultAsync(
-                m => (m.Code == jobTitle.Code ||
-                m.Name.ToUpper() == jobTitle.Name.ToUpper()) &&
-                m.TitleId != jobTitle.TitleId);
+            var checker = await _unitOfWork.JobTitle.SingleOrDefaultAsync(
+                filter:
+                    m => (m.Code == jobTitle.Code ||
+                    m.Name.ToUpper() == jobTitle.Name.ToUpper()) &&
+                    m.TitleId != jobTitle.TitleId);
 
             if (checker != null)
             {
                 return BadRequest("Job Tittle already exists");
             }
 
-            _context.JobTitles.Add(jobTitle);
-            await _context.SaveChangesAsync();
+            await _unitOfWork.JobTitle.AddAsync(jobTitle);
+            await _unitOfWork.SaveChangesAsync();
 
             return NoContent();
         }
@@ -65,7 +58,11 @@ namespace Andal.Controllers
                 return BadRequest("Invalid modelstate!");
             }
 
-            var model = await _context.JobTitles.SingleOrDefaultAsync(m => m.TitleId == jobTitle.TitleId);
+            var model = await _unitOfWork.JobTitle.SingleOrDefaultAsync(
+                disableTracking:
+                    false,
+                filter:
+                    m => m.TitleId == jobTitle.TitleId);
 
             if (model == null)
             {
@@ -75,18 +72,19 @@ namespace Andal.Controllers
             model.Code = jobTitle.Code.Trim().ToUpper();
             model.Name = jobTitle.Name;
 
-            var checker = await _context.JobTitles.AsNoTracking().SingleOrDefaultAsync(
-                m => (m.Code == model.Code ||
-                m.Name.ToUpper() == model.Name.ToUpper()) &&
-                m.TitleId != model.TitleId);
+            var checker = await _unitOfWork.JobTitle.SingleOrDefaultAsync(
+                filter:
+                    m => (m.Code == model.Code ||
+                    m.Name.ToUpper() == model.Name.ToUpper()) &&
+                    m.TitleId != model.TitleId);
 
             if (checker != null)
             {
                 return BadRequest("Job Tittle already exists");
             }
 
-            _context.JobTitles.Update(model);
-            await _context.SaveChangesAsync();
+            _unitOfWork.JobTitle.Update(model);
+            await _unitOfWork.SaveChangesAsync();
 
             return NoContent();
         }
@@ -94,15 +92,19 @@ namespace Andal.Controllers
         [HttpDelete("{TitileId}")]
         public async Task<IActionResult> DeleteJobTitle(int TitileId)
         {
-            var jobTitle = await _context.JobTitles.FindAsync(TitileId);
+            var jobTitle = await _unitOfWork.JobTitle.SingleOrDefaultAsync(
+                disableTracking:
+                    false,
+                filter:
+                    m => m.TitleId == TitileId);
 
             if (jobTitle == null)
             {
                 return NotFound("Job Title notfound!");
             }
 
-            _context.JobTitles.Remove(jobTitle);
-            await _context.SaveChangesAsync();
+            _unitOfWork.JobTitle.Remove(jobTitle);
+            await _unitOfWork.SaveChangesAsync();
 
             return NoContent();
         }

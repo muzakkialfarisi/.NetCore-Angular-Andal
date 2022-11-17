@@ -3748,6 +3748,32 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Andal.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Andal.Models": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "7.0.0",
+          "Microsoft.EntityFrameworkCore.Relational": "7.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Andal.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Andal.DataAccess.dll": {}
+        }
+      },
+      "Andal.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Andal.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Andal.Models.dll": {}
+        }
       }
     }
   },
@@ -10841,10 +10867,22 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Andal.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../Andal.DataAccess/Andal.DataAccess.csproj",
+      "msbuildProject": "../Andal.DataAccess/Andal.DataAccess.csproj"
+    },
+    "Andal.Models/1.0.0": {
+      "type": "project",
+      "path": "../Andal.Model/Andal.Models.csproj",
+      "msbuildProject": "../Andal.Model/Andal.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Andal.DataAccess >= 1.0.0",
+      "Andal.Models >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.0",
@@ -10885,7 +10923,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\faris\\source\\repos\\Andal\\Andal.DataAccess\\Andal.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\faris\\source\\repos\\Andal\\Andal.DataAccess\\Andal.DataAccess.csproj"
+            },
+            "C:\\Users\\faris\\source\\repos\\Andal\\Andal.Model\\Andal.Models.csproj": {
+              "projectPath": "C:\\Users\\faris\\source\\repos\\Andal\\Andal.Model\\Andal.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -10944,7 +10989,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

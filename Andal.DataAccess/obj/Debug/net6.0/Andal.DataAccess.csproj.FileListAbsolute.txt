@@ -1,0 +1,15 @@
+C:\Users\faris\source\repos\Andal\Andal.DataAccess\obj\Debug\net6.0\Andal.DataAccess.csproj.AssemblyReference.cache
+C:\Users\faris\source\repos\Andal\Andal.DataAccess\obj\Debug\net6.0\Andal.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\faris\source\repos\Andal\Andal.DataAccess\obj\Debug\net6.0\Andal.DataAccess.AssemblyInfoInputs.cache
+C:\Users\faris\source\repos\Andal\Andal.DataAccess\obj\Debug\net6.0\Andal.DataAccess.AssemblyInfo.cs
+C:\Users\faris\source\repos\Andal\Andal.DataAccess\obj\Debug\net6.0\Andal.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\faris\source\repos\Andal\Andal.DataAccess\bin\Debug\net6.0\Andal.DataAccess.deps.json
+C:\Users\faris\source\repos\Andal\Andal.DataAccess\bin\Debug\net6.0\Andal.DataAccess.dll
+C:\Users\faris\source\repos\Andal\Andal.DataAccess\bin\Debug\net6.0\Andal.DataAccess.pdb
+C:\Users\faris\source\repos\Andal\Andal.DataAccess\bin\Debug\net6.0\Andal.Models.dll
+C:\Users\faris\source\repos\Andal\Andal.DataAccess\bin\Debug\net6.0\Andal.Models.pdb
+C:\Users\faris\source\repos\Andal\Andal.DataAccess\obj\Debug\net6.0\Andal.DataAccess.csproj.CopyComplete
+C:\Users\faris\source\repos\Andal\Andal.DataAccess\obj\Debug\net6.0\Andal.DataAccess.dll
+C:\Users\faris\source\repos\Andal\Andal.DataAccess\obj\Debug\net6.0\refint\Andal.DataAccess.dll
+C:\Users\faris\source\repos\Andal\Andal.DataAccess\obj\Debug\net6.0\Andal.DataAccess.pdb
+C:\Users\faris\source\repos\Andal\Andal.DataAccess\obj\Debug\net6.0\ref\Andal.DataAccess.dll
